@@ -1,0 +1,63 @@
+const mongoose= require('mongoose');
+
+const referralSchema=new mongoose.Schema({
+    date:{
+        type:Date,
+        default:Date.now
+      },
+  memberno:{
+    type:Number,
+    required:true
+  },
+  rlvl1:{
+    type:Number,
+    required:true
+  },
+  rlvl2:{
+    type:Number,
+    required:false
+  },
+  rlvl3:{
+    type:Number,
+    required:false
+  },
+  rlvl4:{
+    type:Number,
+    required:false
+  },
+  rlvl5:{
+    type:Number,
+    required:false
+  },
+  rlvl6:{
+    type:Number,
+    required:false
+  },
+  rlvl7:{
+    type:Number,
+    required:false
+  },
+  rlvl8:{
+    type:Number,
+    required:false
+  },
+  rlvl9:{
+    type:Number,
+    required:false
+  },
+  rlvl10:{
+    type:Number,
+    required:false
+  },
+  rlvl11:{
+    type:Number,
+    required:false
+  },
+  rlvl12:{
+    type:Number,
+    required:false
+  },
+});
+
+const referral= new mongoose.model('referral',referralSchema);
+module.exports=referral;
