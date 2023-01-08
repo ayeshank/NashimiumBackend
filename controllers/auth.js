@@ -2376,7 +2376,7 @@ const pCurrency = async (req, res) => {
 router.post("/prefferedCurrencyPOST", pCurrency);
 
 const pCurrencyGet = async (req, res) => {
-  const { usercookie } = req.body;
+  //const { usercookie } = req.body;
   const pfg = await PrefCurr.find({ memberno: req.session.membersno });
   res.json({ pfg });
 };
