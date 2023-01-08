@@ -991,6 +991,7 @@ router.get("/adminget", async (req, res) => {
 });
 router.get("/memberinfo", async (req, res) => {
   const memberLogin = await Member.findOne({ memberno: req.session.membersno }); // ye purey us doc ka data dedega
+  console.log("req.session.membersno", req.session.membersno);
   res.json({ memberLogin });
 });
 

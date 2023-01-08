@@ -58,6 +58,7 @@ app.use(express.json());
 app.use(express.json());
 app.use(cookieParser());
 
+app.set("trust proxy", 1);
 app.use(
   session({
     secret: "Ihsanxna",
@@ -65,6 +66,10 @@ app.use(
     saveUninitialized: true,
     cookie: {
       maxAge: 1000 * 60 * 60 * 24, // if 1 day * 24 but since *3 its for 3 hours only
+      secure:
+        process.env.NODE_ENV && process.env.NODE_ENV == "production"
+          ? true
+          : false,
     },
   })
 );
