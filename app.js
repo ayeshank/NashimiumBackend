@@ -11,7 +11,7 @@ const path = require("path");
 
 dotenv.config();
 const app = express();
-const port = process.env.PORT || 3000; // jb 3000 se 5000 kia tha to cannot post ka error login pr hi agaya tha
+const port = process.env.PORT || 5000; // jb 3000 se 5000 kia tha to cannot post ka error login pr hi agaya tha
 const DATABASE_URL = process.env.DATABASE_URL;
 
 //BODY PARSER
@@ -34,6 +34,7 @@ connectDb(DATABASE_URL);
 //JSON
 app.use(express.json());
 
+// mongoose.set("strictQuery", true);
 // mongoose
 //   .connect(
 //     "mongodb+srv://ayesha_user-21:757001ank@cluster0.lvksl.mongodb.net/xnadb?retryWrites=true&w=majority"
